@@ -71,4 +71,75 @@ th{
     left: 1393px;
     width: 44px;
     height: 44px;
+    cursor: pointer;
+}
+.input1{
+    top: 370px;
+    left: 554px;
+    width: 808px;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+    opacity: 1;
+}
+.input2{
+    top: 580px;
+    left: 554px;
+    width: 808px;
+    height: 104px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+select{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font: normal normal normal 16px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    background-color: transparent;
+    width: 250px;
+    height: 50px;
+}
+
+.input4{
+    top: 735px;
+    left: 1112px;
+    width: 250px;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+.button{
+    font-size: 20px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+    background: rgb(227, 222, 222);
+    border: none;
+    font-weight: 400;
+    min-width: 140px;
+    padding: 7px 7px;
+    border: 1px solid #707070;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.submitButton{
+    border: none;
+    background-color: rgb(227, 222, 222);
+    margin-right: 30px;
+    border: 1px solid #707070;
+}
+.cancelButton{
+    text-decoration: none;
+    text-align: center;
 }
