@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=roboto:wght@300:400:500:600&display=swap" rel="stylesheet">
+    <title>User form</title>
     <link rel="stylesheet" href="../Styles/AddressBook.css">
-    <title>Address Book Form</title>
+    <script defer href="../Script/AddressBook.js"></script>
 </head>
 <body>
     <header class="header-content header">
@@ -18,69 +18,69 @@
             </div>
         </div>
     </header>
-    <div class="table-main">
-        <table id="display" class="table">
-            <tr>
-                <th>PERSON ADDRES FORM</th>
-                <th class="header-logo"><img id="1" onclick="cancel(this)" 
-                    src="../Assets/icons/cancel-logo.PNG" alt="cancel"></th>
-            </tr>
-            <tr>
-                <td><label class="label-text" for="fullName">Full Name</label><br>
-                <input class="input1" type="text" id="fullName" name="fullName"></td>
-            </tr>
-            <tr>
-                <td><label class="label-text" for="phoneNumber">Phone Number</label><br>
-                <input class="input1" type="text" id="phoneNumber" name="phoneNumber"></td>
-            </tr>
-            <tr>
-                <td><label class="label-text" for="address">Address</label><br>
-                <input class="input2" type="text" id="address" name="address"></td>
-            </tr>
-            <tr>
-                <td>
-                    <select id="city" name="City">
-                        <option value="select-city">Select-City</option>
-                        <option value="city1">City1</option>
-                        <option value="city2">City2</option>
-                        <option value="city3">City3</option>
-                        <option value="city4">City4</option>
-                        <option value="city5">City5</option>
-                        <option value="city6">City6</option>
-                        <option value="city7">City7</option>
-                        <option value="city8">City8</option>
-                        <option value="city9">City9</option>
-                        <option value="city10">City10</option>
-                        <option value="city11">City11</option>
-                        <option value="city12">City12</option>
-                        <option value="city13">City13</option>
-                        <option value="city14">City14</option>
-                        <option value="city15">City15</option>
-                        <option value="city16">City16</option>
-                        <option value="city17">City17</option>
-                        <option value="city18">City18</option>
-                        <option value="city19">City19</option>
-                    </select>
-                    <select id="state" name="State">
-                        <option value="select-state">Select-State</option>
-                        <option value="state1">state1</option>
-                        <option value="state2">state2</option>
-                        <option value="state3">state3</option>
-                        <option value="state4">state4</option>
-                        <option value="state5">state5</option>
-                        <option value="state6">state6</option>
-                        <option value="state7">state7</option>
-                    </select>
-                    <input class="input4" type="text" id="zipCode" name="zipCode" placeholder="Zip Code">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="submit" class="button submitButton" id="submitButton">Add</button>
-                    <button type="reset" class="button resetButton">Reset</button>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <form>
+        <header class="headerContainer">
+            <div class="form-head">PERSON ADDRES FORM</div>
+            
+        </header>
+        <div>
+            <label for="text">Full Name</label><br>
+            <input class="input1" type="text" id="text" name="text">
+            <error-output class="text-error" for="text"></error-output>
+        </div>
+        <div>
+            <label for="phoneNumber">Phone Number</label><br>
+            <input class="input1" type="phoneNumber" id="phoneNumber" name="phoneNumber">
+            <error-output class="tel-error" for="phoneNumber"></error-output>
+        </div>
+        <div>
+            <label for="address">Address</label><br>
+            <input class="input1" type="address" id="address" name="address">
+            <error-output class="tel-error" for="address"></error-output>
+        </div>
+        <div>
+            <select id="city" name="City">
+                <option value="select-city">Select-City</option>
+                <option value="city1">City1</option>
+                <option value="city2">City2</option>
+                <option value="city3">City3</option>
+                <option value="city4">City4</option>
+                <option value="city5">City5</option>
+                <option value="city6">City6</option>
+                <option value="city7">City7</option>
+                <option value="city8">City8</option>
+                <option value="city9">City9</option>
+                <option value="city10">City10</option>
+                <option value="city11">City11</option>
+                <option value="city12">City12</option>
+                <option value="city13">City13</option>
+                <option value="city14">City14</option>
+                <option value="city15">City15</option>
+                <option value="city16">City16</option>
+                <option value="city17">City17</option>
+                <option value="city18">City18</option>
+                <option value="city19">City19</option>
+            </select>
+            <select id="state" name="State">
+                <option value="select-state">Select-State</option>
+                <option value="state1">state1</option>
+                <option value="state2">state2</option>
+                <option value="state3">state3</option>
+                <option value="state4">state4</option>
+                <option value="state5">state5</option>
+                <option value="state6">state6</option>
+                <option value="state7">state7</option>
+            </select>
+            <input class="input2" type="text" id="zipCode" name="zipCode" placeholder="Zip Code">
+        </div>
+        <!-- <div class="buttonParent">
+            <a href="home.html" class="resetButton button cancelButton">Cancel</a>
+            <div class="Add-reset">
+                <button type="submit" class="button addButton" id="addButton">Add</button>
+                <button type="reset" class="button resetButton">Reset</button>
+            </div>
+        </div> -->
+    </form>
+    
 </body>
 </html>
