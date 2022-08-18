@@ -46,3 +46,10 @@ const remove = (node) => {
     localStorage.setItem("AddressBookList", JSON.stringify(addressBookList));
     createInnerHtml();                            
 }
+
+const update = (node) => {
+    let addressBookData = addressBookList.find(addData => addData._name == node.id);
+    if(!addressBookData) return;
+    localStorage.setItem("editEmp", JSON.stringify(addressBookData));
+    window.location.replace(site_properties.add_address_book);
+}
