@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User form</title>
+    <title>Address Book Form</title>
     <link rel="stylesheet" href="../Styles/AddressBook.css">
     <script defer href="../Script/AddressBook.js"></script>
 </head>
@@ -21,12 +21,11 @@
     <form class="form" action="#" onreset="resetForm()" onsubmit="save()";return false>
         <header class="headerContainer">
             <div class="form-head">PERSON ADDRES FORM</div>
-            
         </header>
         <div>
-            <label for="text">Full Name</label><br>
-            <input class="input1" type="text" id="text" name="text">
-            <error-output class="text-error" for="text"></error-output>
+            <label for="name">Full Name</label><br>
+            <input class="input1" type="text" id="name" name="name">
+            <error-output class="text-error" for="name"></error-output>
         </div>
         <div>
             <label for="phoneNumber">Phone Number</label><br>
@@ -39,7 +38,7 @@
             <error-output class="tel-error" for="address"></error-output>
         </div>
         <div>
-            <select id="city" name="City">
+            <select id="city" name="city">
                 <option value="select-city">Select-City</option>
                 <option value="city1">City1</option>
                 <option value="city2">City2</option>
@@ -61,7 +60,7 @@
                 <option value="city18">City18</option>
                 <option value="city19">City19</option>
             </select>
-            <select id="state" name="State">
+            <select id="state" name="state">
                 <option value="select-state">Select-State</option>
                 <option value="state1">state1</option>
                 <option value="state2">state2</option>

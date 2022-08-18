@@ -1,4 +1,4 @@
-const text = document.querySelector("#text");
+const text = document.querySelector("#name");
 const textError = document.querySelector(".text-error");
 text.addEventListener("input",function(){
     let RegexName=RegExp("^[A-Z]{1}[a-z]{3,}$");
