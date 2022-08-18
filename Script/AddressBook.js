@@ -1,30 +1,69 @@
-const text = document.querySelector("#name");
-const textError = document.querySelector(".text-error");
-text.addEventListener("input",function(){
-    let RegexName=RegExp("^[A-Z]{1}[a-z]{3,}$");
-    if(RegexName.test(text.value)){
-        textError.textContent = "";
-    }else{
-        textError.textContent = "Invalid name";
-    }
-});
+window.addEventListener("DOMContentLoaded", (event) => {
+    const name = document.querySelector("#name");
+    const textError = document.querySelector(".text-error");
+    name.addEventListener("input",function(){
+        if(name.value.length==0){
+            textError.textContent = "";
+            return;
+        }
+        try{
+            (new AddressBookValue()).name = name.value;
+            textError.textContent = "";
+        }catch (e){
+            textError.textContent = e;
+        }
+    });
 
-const number = document.querySelector("#phoneNumber");
-const telError = document.querySelector(".tel-error");
-number.addEventListener("input",function(){
-    let RegexTel=RegExp("^[1-9]{2}\\s{0,1}[0-9]{10}$");
-    if(RegexTel.test(phoneNumber.value)){
-        telError.textContent = "";
-    }else{
-        telError.textContent = "Invalid phone number";
-    }
+    const phoneNumber = document.querySelector("#phoneNumber");
+    const telError = document.querySelector(".tel-error");
+    phoneNumber.addEventListener("input",function(){
+        if(phoneNumber.value.length==0){
+            textError.textContent = "";
+            return;
+        }
+        try{
+            (new AddressBookValue()).phoneNumber = phoneNumber.value;
+            textError.textContent = "";
+        }catch (e){
+            textError.textContent = e;
+        }
+    });
+
+
 });
 
 const save = () => {
-    try{
+    
         let addressBookData = createAddressBook();
         createAndUpdateStorage(addressBookData);
-    }catch(e){
-        return;
+        alert("save");
+    
+}
+
+function createAndUpdateStorage(addressBookData){
+    let addressBookList = JSON.parse(localStorage.getItem("AddressBookList"));
+    if(addressBookList != undefined){
+        addressBookList.push(addressBookData);
+    }else{
+        addressBookList = [addressBookData]
     }
+    alert(addressBookList.toString());
+    localStorage.setItem("AddressBookList", JSON.stringify(addressBookList))
+}
+
+const createAddressBook = () => {
+    let addressBookData = new AddressBookValue();    
+    addressBookData.name = getInputValueById("#name");        
+    addressBookData.city = getInputValueById("#city");
+    addressBookData.state = getInputValueById("#state");
+    addressBookData.address = getInputValueById("#address");
+   // addressBookData.name = getInputValueById("#name");
+    addressBookData.phoneNumber = getInputValueById("#phoneNumber");
+    addressBookData.zipCode = getInputValueById("#zipCode");
+    return addressBookData;
+}
+
+const getInputValueById = (id) => {
+    let value = document.querySelector(id).value;
+    return value;
 }

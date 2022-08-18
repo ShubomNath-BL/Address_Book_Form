@@ -6,12 +6,18 @@ class AddressBookValue{
 
     get name(){return this._name}
     set name(name){
-        this._name = name;
+        let nameRegex = RegExp("^[A-Z]{1}[a-z]{3,}$");
+        if(nameRegex.test(name))
+            this._name=name;
+        else throw "Name is Invalid";  
     }
 
     get phoneNumber(){return this._phoneNumber}
     set phoneNumber(phoneNumber){
-        this._phoneNumber = phoneNumber;
+        let RegexTel=RegExp("^[1-9]{2}\\s{0,1}[0-9]{10}$");
+        if(RegexTel.test(phoneNumber))
+            this._phoneNumber=phoneNumber;
+        else throw "Number is Invalid";  
     }
 
     get address(){return this._address}
