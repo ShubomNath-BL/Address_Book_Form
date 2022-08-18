@@ -19,3 +19,12 @@ number.addEventListener("input",function(){
         telError.textContent = "Invalid phone number";
     }
 });
+
+const save = () => {
+    try{
+        let addressBookData = createAddressBook();
+        createAndUpdateStorage(addressBookData);
+    }catch(e){
+        return;
+    }
+}
